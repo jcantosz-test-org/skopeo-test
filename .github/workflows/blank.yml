@@ -26,4 +26,4 @@ jobs:
       - name: Run a one-line script
         run: |
            docker pull quay.io/skopeo/stable:latest
-           docker run -it --entrypoint /bin/bash quay.io/skopeo/stable:latest  -c  "skopeo copy --help"
+           docker run -i --entrypoint /bin/bash quay.io/skopeo/stable:latest  -c  "skopeo copy --help"
