@@ -1,6 +1,7 @@
 name: CI simple
 
 on:
+  push:
   issues:
     types:
       - opened
@@ -13,9 +14,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10' 
+      
       - name: Run a one-line script
         run: python --version
+      
+      - name: run python script
+        run: python my-script.py
 
