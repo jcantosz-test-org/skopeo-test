@@ -2,7 +2,8 @@ name: CI simple
 
 on:
   issues:
-    types: [created]
+    types:
+      - opened
   workflow_dispatch:
 
 
