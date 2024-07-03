@@ -1,0 +1,26 @@
+name: show outputting data
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: show secret masking
+      run: echo "Hello ${{ secrets.DEMO_SECRET }}"
+
+    - name: Create file to simulate program output
+      run: echo "some data" > my-file.txt
+
+    - name: Show file in workflow summary page
+      run: cat my-file.txt >> $GITHUB_STEP_SUMMARY
+
+    - name: Make the file available as zip on the workflow
+      uses: actions/upload-artifact@v4
+      with:
+        name: my-file
+        path: my-file.txt
