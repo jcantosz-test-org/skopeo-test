@@ -39,6 +39,7 @@ jobs:
 
   test:
     needs: build
+    name: simple-test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
