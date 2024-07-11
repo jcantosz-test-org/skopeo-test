@@ -2,6 +2,8 @@ name: CI simple
 
 on:
   push:
+  pull_request:
+  merge_group:
   issues:
     types:
       - opened
