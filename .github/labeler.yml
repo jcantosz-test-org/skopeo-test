@@ -1,0 +1,4 @@
+bug:
+ - head-branch: ['^bug', 'bug']
+documentation:
+ - head-branch: ['^docs']
